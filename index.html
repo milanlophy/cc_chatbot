@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>College Assistant</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<div class="chat-container">
+
+    <div class="header">
+        <h1>🎓 College Assistant</h1>
+        <p>Ask me anything about the college</p>
+    </div>
+
+
+    <div id="chat-box">
+
+        <div class="message bot">
+            Hello! 👋<br>
+            I'm your college assistant.
+            Ask me about admissions, courses,
+            library, facilities, scholarships,
+            departments and more.
+        </div>
+
+    </div>
+
+
+    <div class="input-area">
+
+        <input
+            type="text"
+            id="message"
+            placeholder="Ask your question..."
+            onkeydown="handleKey(event)"
+        >
+
+        <button onclick="sendMessage()">
+            Send
+        </button>
+
+    </div>
+
+</div>
+
+
+<script src="{{ url_for('static', filename='script.js') }}">
+</script>
+
+</body>
+
+</html>
